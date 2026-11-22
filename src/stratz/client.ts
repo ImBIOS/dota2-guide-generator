@@ -7,32 +7,52 @@ export function getToken(): string | null {
 export async function stratzQuery<T>(
   query: string,
   variables?: Record<string, unknown>,
+  retries = 4,
 ): Promise<T> {
   const token = getToken();
   if (!token) throw new Error("STRATZ_API_TOKEN is not set");
-  const res = await fetch(ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
-      "User-Agent": "STRATZ_API",
-    },
-    body: JSON.stringify({ query, variables }),
-  });
-  const text = await res.text();
-  let json: any;
-  try {
-    json = JSON.parse(text);
-  } catch {
-    throw new Error(`Stratz returned non-JSON: ${text.slice(0, 300)}`);
+  let lastErr = "";
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    const res = await fetch(ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+        "User-Agent": "STRATZ_API",
+      },
+      body: JSON.stringify({ query, variables }),
+    });
+    const text = await res.text();
+    if (!text.trim().startsWith("{")) {
+      lastErr = text.slice(0, 200);
+      // IP/rate-limit message from Stratz — back off and retry
+      if (/IP Addresses|rate limit|Too Many/i.test(text)) {
+        const wait = Math.min(600, 30 * 2 ** attempt) * 1000;
+        console.log(`Stratz throttled (${lastErr.slice(0, 80)}…). retry ${attempt + 1}/${retries} in ${wait / 1000}s`);
+        await new Promise((r) => setTimeout(r, wait));
+        continue;
+      }
+      throw new Error(`Stratz returned non-JSON: ${text.slice(0, 300)}`);
+    }
+    let json: any;
+    try {
+      json = JSON.parse(text);
+    } catch {
+      throw new Error(`Stratz returned non-JSON: ${text.slice(0, 300)}`);
+    }
+    if (json.errors) {
+      throw new Error(`Stratz errors: ${JSON.stringify(json.errors).slice(0, 500)}`);
+    }
+    if (json.message === "API rate limit exceeded") {
+      lastErr = json.message;
+      const wait = Math.min(600, 30 * 2 ** attempt) * 1000;
+      console.log(`Stratz rate limit. retry ${attempt + 1}/${retries} in ${wait / 1000}s`);
+      await new Promise((r) => setTimeout(r, wait));
+      continue;
+    }
+    return json.data as T;
   }
-  if (json.errors) {
-    throw new Error(`Stratz errors: ${JSON.stringify(json.errors).slice(0, 500)}`);
-  }
-  if (json.message === "API rate limit exceeded") {
-    throw new Error("Stratz rate limit exceeded — back off and retry");
-  }
-  return json.data as T;
+  throw new Error(`Stratz throttled after retries: ${lastErr}`);
 }
 
 /**
