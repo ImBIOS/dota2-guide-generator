@@ -1,6 +1,8 @@
 node_modules/
 dist/
 .env
-guides/
-builds/
+guides/*.md
+!guides/README.md
+builds/*.json
+!builds/README.md
 *.har
