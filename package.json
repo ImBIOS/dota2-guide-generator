@@ -1,0 +1,15 @@
+{
+  "name": "dota2-guide-generator",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "generate": "bun run src/index.ts",
+    "generate:bh": "bun run src/index.ts --hero bounty-hunter --role pos4",
+    "check": "bunx tsc --noEmit",
+    "fetch-schema": "bun run scripts/fetch-stratz-schema.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}

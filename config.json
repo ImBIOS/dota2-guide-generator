@@ -1,0 +1,18 @@
+{
+  "patch": "7.42",
+  "bracket": "DIVINE_PLUS",
+  "bracketLabel": "Divine-Immortal",
+  "takeWeeks": 2,
+  "gameModes": ["ALL_PICK_RANKED"],
+  "heroes": [
+    {
+      "id": 62,
+      "slug": "bounty-hunter",
+      "name": "Bounty Hunter",
+      "roles": ["pos4"],
+      "baselineWinRateSource": "d2pt-support-7.42",
+      "baselineWinRate": 53.3
+    }
+  ],
+  "thresholds": { "minPickRate": 5, "minMatches": 30 }
+}
