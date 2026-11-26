@@ -3,6 +3,8 @@ dist/
 .env
 guides/*.md
 !guides/README.md
+!guides/bounty-hunter-pos4-*.md
 builds/*.json
 !builds/README.md
+!builds/bounty-hunter-pos4-*.build.json
 *.har
