@@ -1,0 +1,49 @@
+{
+  "title": "7.42 (Soft Support) pos4 | Divine-Immortal Playstyle [Bounty Hunter]",
+  "hero": "bounty_hunter",
+  "filename": "guides/bounty_hunter_pos4_7.42.build",
+  "isScratch": "0",
+  "skillBuild": {
+    "Shadow Walk": [
+      1,
+      4,
+      5,
+      7
+    ],
+    "Jinada": [
+      2,
+      13,
+      14
+    ],
+    "Shuriken Toss": [
+      3,
+      8,
+      9,
+      11
+    ],
+    "Track": [
+      6,
+      12,
+      18
+    ]
+  },
+  "itemBuild": {
+    "starting_items_live_stratz": [
+      "item_boots_of_speed"
+    ],
+    "boots_live_stratz": [
+      "item_tranquil_boots"
+    ],
+    "core_situational_live_stratz_by_matches": [
+      "item_urn_of_shadows"
+    ],
+    "curated_phases_d2pt_7_42_pro_pub_cross_check": [
+      "item_urn_of_shadows_essence_distiller",
+      "item_eul_s_scepter_of_divinity",
+      "item_blink_dagger",
+      "item_scythe_of_vyse"
+    ]
+  },
+  "itemTooltips": {},
+  "abilityTooltips": {}
+}
