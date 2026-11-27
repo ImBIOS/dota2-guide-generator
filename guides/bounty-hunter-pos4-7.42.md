@@ -1,9 +1,9 @@
 # 7.42 (Soft Support) pos4 | Divine-Immortal Playstyle [Bounty Hunter]
 
 **By Xarthe-method reconstruction** · Role: pos 4 Soft Support · Bracket: Divine-Immortal
-**Patch:** 7.42 · **Guide last updated on:** 2026-11-26
-**Data sources:** Stratz DIVINE+IMMORTAL pos-4 baseline (live 50289 matches, WR 55.6%) + D2PT 7.42 pro-pub item rows, 7.42.
-**Method note:** Live Stratz rows (starting/boots/full/neutral/talent for DIVINE_IMMORTAL pos-4). Impact = item WR − baseline 55.6%. Baseline = **55.6%**. Impact = item WR − baseline.
+**Patch:** 7.42 · **Guide last updated on:** 2026-11-27
+**Data sources:** Stratz DIVINE+IMMORTAL pos-4 baseline (live 45748 matches, WR 54.1%) + D2PT 7.42 pro-pub item rows, 7.42.
+**Method note:** Live Stratz rows (starting/boots/full/neutral/talent for DIVINE_IMMORTAL pos-4). Impact = item WR − baseline 54.1%. Baseline = **54.1%**. Impact = item WR − baseline.
 
 ## 7.42 Bounty Hunter deltas
 
@@ -34,28 +34,28 @@
 
 | Item | Pick | Win | Impact |
 |---|---|---|---|
-| Boots of Speed | 49% | 51% | -4.6% |
+| Boots of Speed | 49% | 51% | -3.1% |
 
 ### BOOTS (live Stratz)
 
 | Item | Pick | Win | Impact |
 |---|---|---|---|
-| Tranquil Boots (8') | 87.5% | 55.7% | +0.1% |
+| Tranquil Boots (8') | 87.5% | 55.7% | +1.6% |
 
 ### CORE + SITUATIONAL (live Stratz, by matches)
 
 | Item | Pick | Win | Impact |
 |---|---|---|---|
-| Urn of Shadows (12') | 53.8% | 58.1% | +2.5% |
+| Urn of Shadows (12') | 53.8% | 58.1% | +4% |
 
 ### CURATED PHASES (D2PT 7.42 pro-pub cross-check) [cross-check]
 
 | Item | Pick | Win | Impact |
 |---|---|---|---|
-| Urn of Shadows → Essence Distiller (12'→18') | 37.5% | 63.3% | +7.7% |
-| Eul's Scepter of Divinity (24') | 47.5% | 55.3% | -0.3% |
-| Blink Dagger (36') | 19% | 73% | +17.4% |
-| Scythe of Vyse (42') | 11% | 67% | +11.4% |
+| Urn of Shadows → Essence Distiller (12'→18') | 37.5% | 63.3% | +9.2% |
+| Eul's Scepter of Divinity (24') | 47.5% | 55.3% | +1.2% |
+| Blink Dagger (36') | 19% | 73% | +18.9% |
+| Scythe of Vyse (42') | 11% | 67% | +12.9% |
 
 ## ABILITY BUILD
 
@@ -77,7 +77,7 @@
 
 ## AUTHOR'S ABILITY NOTES
 
-- Live bracket: 50289 pos-4 matches, hero WR 55.6% (DIVINE+IMMORTAL).
+- Live bracket: 45748 pos-4 matches, hero WR 54.1% (DIVINE+IMMORTAL).
 - Shadow Walk maxed first; Jinada value point L2; Shuriken maxed second; Track 6/12/18.
 
 ## AUTHOR'S ITEM NOTES
