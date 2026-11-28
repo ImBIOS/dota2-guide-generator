@@ -1,7 +1,7 @@
 # 7.42 (Soft Support) pos4 | Divine-Immortal Playstyle [Bounty Hunter]
 
 **By Xarthe-method reconstruction** · Role: pos 4 Soft Support · Bracket: Divine-Immortal
-**Patch:** 7.42 · **Guide last updated on:** 2026-11-27
+**Patch:** 7.42 · **Guide last updated on:** 2026-11-28
 **Data sources:** Stratz DIVINE+IMMORTAL pos-4 baseline (live 45748 matches, WR 54.1%) + D2PT 7.42 pro-pub item rows, 7.42.
 **Method note:** Live Stratz rows (starting/boots/full/neutral/talent for DIVINE_IMMORTAL pos-4). Impact = item WR − baseline 54.1%. Baseline = **54.1%**. Impact = item WR − baseline.
 
